@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<hazelcast
+        xsi:schemaLocation="http://www.hazelcast.com/schema/config http://www.hazelcast.com/schema/config/hazelcast-config.xsd"
+        xmlns="http://www.hazelcast.com/schema/config"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+   &lt;!&ndash; <map name="users">
+        <max-size>200</max-size>
+        <eviction-policy>LFU</eviction-policy>
+        <time-to-live-seconds>200</time-to-live-seconds>
+    </map>&ndash;&gt;
+
+</hazelcast>-->
+
+<hazelcast-client>
+   <group>
+      <name>dev</name>
+      <password>dev-pass</password>
+   </group>
+   <network>
+      <cluster-members>
+         <address>172.17.0.2:5701</address>
+      </cluster-members>
+      <smart-routing>true</smart-routing>
+      <redo-operation>true</redo-operation>
+      <connection-attempt-limit>10</connection-attempt-limit>
+   </network>
+</hazelcast-client>
