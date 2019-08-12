@@ -21,7 +21,9 @@ public class HazelcastConfiguration {
         config.setInstanceName("hz-instance");
         config.getNetworkConfig().getJoin().getTcpIpConfig().setEnabled(true);
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
-        config.getNetworkConfig().getJoin().getTcpIpConfig().addMember("172.17.0.2:5701");
+        /*config.getNetworkConfig().getJoin().getTcpIpConfig().addMember("172.17.0.2:5701");
+        config.getNetworkConfig().getJoin().getTcpIpConfig().addMember("172.17.0.3:5701");
+        config.getNetworkConfig().getJoin().getTcpIpConfig().addMember("172.17.0.4:5701");*/
         return Hazelcast.getOrCreateHazelcastInstance(config);
 
         /*ClientConfig clientConfig = new ClientConfig();

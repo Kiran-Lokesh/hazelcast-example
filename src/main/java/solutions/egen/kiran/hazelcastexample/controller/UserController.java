@@ -31,9 +31,10 @@ public class UserController {
     }
 
     @PostMapping(value = "/users")
-    public User load(@RequestBody final User users) {
+    public ResponseEntity load(@RequestBody final User users) {
         userService.save(users);
-        return userService.findByName(users.getName());
+        //return userService.findByName(users.getName());
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("/users/{id}")
